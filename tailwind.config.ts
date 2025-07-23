@@ -52,6 +52,9 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'durga-gold': 'hsl(var(--durga-gold))',
+				'durga-red': 'hsl(var(--durga-red))',
+				'durga-cream': 'hsl(var(--durga-cream))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
