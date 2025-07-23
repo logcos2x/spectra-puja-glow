@@ -21,20 +21,9 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Spectra is your premier travel partner for authentic cultural experiences 
-                  in Bengal. We specialize in creating meaningful connections between travelers 
-                  and the rich heritage of Bengali culture, particularly during the magnificent 
-                  Durga Puja festival.
-                </p>
-                <p>
-                  Our expert team curates exclusive access to the most prestigious Durga Puja 
-                  installations, traditional Bonedi Bari experiences, and immersive cultural 
-                  tours that showcase the true essence of Bengal's artistic and spiritual traditions.
-                </p>
-                <p>
-                  With over a decade of experience in cultural tourism, we pride ourselves on 
-                  delivering personalized, high-quality travel experiences that create lasting 
-                  memories and deep cultural understanding.
+                  At SPECTRA, we create events and experiences that span a
+                  spectrum of ideas, styles and formats. No one-size-fits-all
+                  just fresh, colourful concepts tailored to every occasion.
                 </p>
               </div>
             </div>
@@ -45,8 +34,12 @@ const About = () => {
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-3">
                     <stat.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold text-foreground">{stat.number}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-2xl font-bold text-foreground">
+                    {stat.number}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
@@ -54,39 +47,51 @@ const About = () => {
 
           {/* Features */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-foreground">Why Choose Spectra?</h3>
-            
+            <h3 className="text-2xl font-semibold text-foreground">
+              Why Choose Spectra?
+            </h3>
+
             <div className="space-y-4">
               {[
                 {
                   title: "Exclusive Access",
-                  description: "VIP access to premium Durga Puja installations and heritage locations"
+                  description:
+                    "VIP access to premium Durga Puja installations and heritage locations",
                 },
                 {
                   title: "Expert Guides",
-                  description: "Local cultural experts who bring stories and traditions to life"
+                  description:
+                    "Local cultural experts who bring stories and traditions to life",
                 },
                 {
                   title: "Authentic Experiences",
-                  description: "Genuine cultural immersion with traditional ceremonies and cuisine"
+                  description:
+                    "Genuine cultural immersion with traditional ceremonies and cuisine",
                 },
                 {
                   title: "Premium Comfort",
-                  description: "Carefully selected accommodations and private transportation"
+                  description:
+                    "Carefully selected accommodations and private transportation",
                 },
                 {
                   title: "Small Groups",
-                  description: "Intimate group sizes for personalized attention and experience"
+                  description:
+                    "Intimate group sizes for personalized attention and experience",
                 },
                 {
                   title: "Cultural Insight",
-                  description: "Deep dive into Bengali art, history, and spiritual traditions"
-                }
+                  description:
+                    "Deep dive into Bengali art, history, and spiritual traditions",
+                },
               ].map((feature, index) => (
                 <Card key={index} className="bg-background border-border">
                   <CardContent className="p-4">
-                    <h4 className="font-semibold text-foreground mb-2">{feature.title}</h4>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                    <h4 className="font-semibold text-foreground mb-2">
+                      {feature.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {feature.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
