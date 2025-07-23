@@ -1,67 +1,96 @@
 import { Button } from "@/components/ui/button";
-import durgahero from "@/assets/durga-hero.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen bg-background relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
+    >
+      {/* Gradient background overlay */}
+      <div className="absolute inset-0 opacity-10 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-durga-gold via-durga-cream to-background" />
       </div>
-      
-      <div className="container mx-auto px-4 pt-24 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                <span className="text-foreground">DURGA PUJA</span>
-                <br />
-                <span className="text-primary">ART 2025</span>
-              </h1>
-              <div className="flex items-center space-x-4 text-lg font-medium">
-                <span className="text-foreground">18–22 SEPTEMBER 2025</span>
-                <span className="text-muted-foreground">|</span>
-                <span className="text-primary">KOLKATA</span>
-              </div>
-            </div>
-            
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              First look into the world's biggest public art festival, 
-              before the crowds arrive
-            </p>
 
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground">
-                EXCLUSIVE TRAVEL PACKAGES
-              </h2>
-              <p className="text-muted-foreground">
-                Experience the magic of Durga Puja through Spectra's 
-                specially curated guided Art Tours
-              </p>
-            </div>
+      {/* Floating decorative circles */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-primary rounded-full opacity-20 animate-float z-0" />
+      <div
+        className="absolute bottom-32 right-16 w-16 h-16 bg-primary rounded-full opacity-15 animate-float z-0"
+        style={{ animationDelay: "2s" }}
+      />
+      <div
+        className="absolute top-1/2 left-1/4 w-12 h-12 bg-muted rounded-full opacity-25 animate-float z-0"
+        style={{ animationDelay: "4s" }}
+      />
 
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+      {/* Main content */}
+      <div className="container mx-auto px-4 pt-20 sm:pt-32 pb-16 sm:pb-20 text-center relative z-10">
+
+        <div className="max-w-4xl mx-auto animate-fade-up space-y-6">
+          {/* Badge */}
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-primary/20">
+            <span className="text-sm font-medium text-primary">
+              Official Travel Partner - xyz
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+            <span className="text-foreground">DURGA PUJA</span>
+            <br />
+            <span className="text-primary">ART 2025</span>
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            Experience the magic of Durga Puja through Spectra's specially
+            curated guided Art Tours
+          </p>
+
+          {/* Event Info */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-y-4 sm:gap-6 text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <span className="text-primary font-medium">📅</span>
+              <span>18–22 September 2025</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-primary font-medium">📍</span>
+              <span>Kolkata</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-primary font-medium">🎨</span>
+              <span>World's Biggest Public Art Festival</span>
+            </div>
+          </div>
+
+          {/* Highlight */}
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+            First look into the world's biggest public art festival, before the
+            crowds arrive
+          </p>
+
+          {/* Call to Actions */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#packages">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 w-full sm:w-auto"
+              >
                 Explore Packages
               </Button>
-              <Button variant="outline" size="lg">
+            </a>
+            <a href="#contact">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
                 Contact Us
               </Button>
-            </div>
+            </a>
           </div>
+        </div>
+      </div>
 
-          {/* Image */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src={durgahero} 
-                alt="Durga Puja Art" 
-                className="w-full h-[600px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-            </div>
-          </div>
+      {/* Scroll indicator */}
+      <div className="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
         </div>
       </div>
     </section>
