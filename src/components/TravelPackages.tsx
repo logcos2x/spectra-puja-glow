@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Clock, Users, MapPin } from "lucide-react";
+import durgaExpressImg from "@/assets/durga-express.jpg";
+import heritagePujaImg from "@/assets/heritage-puja.jpg";
+import riverCruiseImg from "@/assets/river-cruise.jpg";
 
 const TravelPackages = () => {
   const packages = [
@@ -15,7 +18,8 @@ const TravelPackages = () => {
         "Comfortable bus transport",
         "Local guide included"
       ],
-      icon: Clock
+      icon: Clock,
+      image: durgaExpressImg
     },
     {
       title: "Heritage Puja Experience",
@@ -28,7 +32,8 @@ const TravelPackages = () => {
         "Daytime cultural showcases",
         "Premium accommodation"
       ],
-      icon: Users
+      icon: Users,
+      image: heritagePujaImg
     },
     {
       title: "Mahalaya River Special",
@@ -41,7 +46,8 @@ const TravelPackages = () => {
         "Cultural performances",
         "Traditional Bengali lunch"
       ],
-      icon: MapPin
+      icon: MapPin,
+      image: riverCruiseImg
     }
   ];
 
@@ -57,14 +63,24 @@ const TravelPackages = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
-            <Card key={index} className="bg-background border-border hover:shadow-xl transition-all duration-300 group">
-              <CardHeader className="text-center pb-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
-                  <pkg.icon className="h-8 w-8 text-primary" />
+            <Card key={index} className="bg-white border-border hover:shadow-xl transition-all duration-300 group overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={pkg.image} 
+                  alt={pkg.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <h3 className="text-xl font-bold mb-1">{pkg.title}</h3>
+                  <div className="text-durga-gold font-semibold">{pkg.duration}</div>
                 </div>
-                <CardTitle className="text-xl text-foreground">{pkg.title}</CardTitle>
-                <div className="text-primary font-semibold">{pkg.duration}</div>
-                <div className="text-sm text-muted-foreground flex items-center justify-center">
+              </div>
+              <CardHeader className="text-center pb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-durga-gold/10 rounded-full mb-4 mx-auto group-hover:bg-durga-gold/20 transition-colors">
+                  <pkg.icon className="h-8 w-8 text-durga-gold" />
+                </div>
+                <div className="text-sm text-durga-red flex items-center justify-center">
                   <Calendar className="h-4 w-4 mr-1" />
                   {pkg.dates}
                 </div>
@@ -76,15 +92,15 @@ const TravelPackages = () => {
                 
                 <ul className="space-y-2">
                   {pkg.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm">
-                      <div className="w-2 h-2 bg-primary rounded-full mr-3" />
+                    <li key={idx} className="flex items-center text-sm text-foreground">
+                      <div className="w-2 h-2 bg-durga-gold rounded-full mr-3" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <div className="pt-4">
-                  <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
+                  <Button className="w-full bg-durga-gold hover:bg-durga-gold/90 text-white" size="lg">
                     Book Now
                   </Button>
                 </div>
@@ -94,8 +110,8 @@ const TravelPackages = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-lg font-semibold text-foreground mb-4">Pick your journey</p>
-          <p className="text-muted-foreground">
+          <p className="text-lg font-semibold text-durga-red mb-4">Pick your journey</p>
+          <p className="text-durga-gold">
             1 Night & 2 Days | 2 Nights & 3 Days | 3 Nights & 4 Days
           </p>
         </div>

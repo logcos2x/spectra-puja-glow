@@ -12,13 +12,13 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <Card className="text-center bg-background border-border hover:shadow-lg transition-shadow">
+        <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          <Card className="text-center bg-white border-border hover:shadow-lg transition-shadow">
             <CardContent className="p-6">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
-                <MapPin className="h-6 w-6 text-primary" />
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-durga-gold/10 rounded-full mb-4">
+                <MapPin className="h-6 w-6 text-durga-gold" />
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Office Address</h3>
+              <h3 className="font-semibold text-durga-red mb-2">Office Address</h3>
               <p className="text-sm text-muted-foreground">
                 123 Park Street<br />
                 Kolkata, West Bengal<br />
@@ -27,41 +27,15 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          <Card className="text-center bg-background border-border hover:shadow-lg transition-shadow">
+          <Card className="text-center bg-white border-border hover:shadow-lg transition-shadow">
             <CardContent className="p-6">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
-                <Phone className="h-6 w-6 text-primary" />
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-durga-gold/10 rounded-full mb-4">
+                <Mail className="h-6 w-6 text-durga-gold" />
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Phone</h3>
-              <p className="text-sm text-muted-foreground">
-                +91 8420797474<br />
-                Call for instant booking
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center bg-background border-border hover:shadow-lg transition-shadow">
-            <CardContent className="p-6">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
-                <Mail className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">Email</h3>
+              <h3 className="font-semibold text-durga-red mb-2">Email</h3>
               <p className="text-sm text-muted-foreground">
                 mail@spectrainfo.in<br />
                 info@spectrainfo.in
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center bg-background border-border hover:shadow-lg transition-shadow">
-            <CardContent className="p-6">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
-                <Clock className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">Office Hours</h3>
-              <p className="text-sm text-muted-foreground">
-                Mon - Sat: 9AM - 7PM<br />
-                Sun: 10AM - 5PM
               </p>
             </CardContent>
           </Card>
