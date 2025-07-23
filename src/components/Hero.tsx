@@ -22,27 +22,32 @@ const Hero = () => {
         style={{ animationDelay: "4s" }}
       />
 
-      {/* Main content container */}
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto animate-fade-up">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-primary/20 mb-6">
+      {/* Main content */}
+      <div className="container mx-auto px-4 pt-20 sm:pt-32 pb-16 sm:pb-20 text-center relative z-10">
+
+        <div className="max-w-4xl mx-auto animate-fade-up space-y-6">
+          {/* Badge */}
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-primary/20">
             <span className="text-sm font-medium text-primary">
               Official Travel Partner - xyz
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          {/* Heading */}
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
             <span className="text-foreground">DURGA PUJA</span>
             <br />
             <span className="text-primary">ART 2025</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
+          {/* Subheading */}
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
             Experience the magic of Durga Puja through Spectra's specially
             curated guided Art Tours
           </p>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8 text-muted-foreground">
+          {/* Event Info */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-y-4 sm:gap-6 text-muted-foreground">
             <div className="flex items-center gap-2">
               <span className="text-primary font-medium">📅</span>
               <span>18–22 September 2025</span>
@@ -57,19 +62,24 @@ const Hero = () => {
             </div>
           </div>
 
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          {/* Highlight */}
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             First look into the world's biggest public art festival, before the
             crowds arrive
           </p>
 
+          {/* Call to Actions */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#packages">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 w-full sm:w-auto"
+              >
                 Explore Packages
               </Button>
             </a>
             <a href="#contact">
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
                 Contact Us
               </Button>
             </a>
@@ -78,7 +88,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+      <div className="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
         </div>
